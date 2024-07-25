@@ -85,12 +85,15 @@ warnings.filterwarnings("ignore")`
 > Prepare final training and testing datasets by defining train_X (features) and train_y (target) for training, and test_X (features) for testing; dropping  'Weekly_Sales' and 'Date' from train_final to create train_X, and assign 'Weekly_Sales' to train_y; and dropping  'Date' from test_final to create test_X.
 > Inspect the final datasets before moving on to training the model.
 5. Machine learning model:
-> **Create a Subset for Quick Testing**
+
+> • **Create a Subset for Quick Testing**
 Objective: Use a random 10% subset of the training data to speed up testing.
 Explanation: train_X.sample(frac=0.1, random_state=42) selects 10% of the rows from train_X randomly. train_y.loc[train_X_subset.index] selects corresponding target values for the subset.
-> **Create and Train the Model**
+
+> • **Create and Train the Model**
 Objective: Initialize and train a Random Forest model.
 Explanation: RandomForestRegressor(n_estimators=100, max_depth=10, n_jobs=-1) creates a Random Forest model with 100 trees, each with a maximum depth of 10, and uses all available CPU cores for computation. clf.fit(train_X_subset, train_y_subset) trains the model using the subset of training data.
-> **Predict and Calculate Accuracy**
+
+> • **Predict and Calculate Accuracy**
 Objective: Make predictions and evaluate the model%E2%80%99s accuracy.
 Explanation: clf.predict(test_X) generates predictions for the test_X data. clf.score(train_X_subset, train_y_subset) computes the R%C2%B2 score (coefficient of determination) on the training subset, which is then rounded and converted to a percentage. The accuracy is printed.
