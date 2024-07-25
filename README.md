@@ -1,5 +1,36 @@
 ## Walmart Recruiting - Store Sales Forecasting
 
+# Introduction
+In this project, we aim to predict weekly sales for a retail store using historical data. We begin by exploring and visualizing the datasets to understand distributions and relationships, including store types, sales patterns, and correlations. The data is then preprocessed by handling missing values, converting categorical variables, and adding temporal features like week and month. We train a Random Forest Regressor on a subset of the data to forecast future sales and evaluate its performance.
+
+# Installation Guide
+### Step 1: Download the Datasets
+
+You need the following datasets for the project:
+
+- `stores.csv`
+- `train.csv`
+- `test.csv`
+- `features.csv`
+
+**Option 1: Download from Provided Links**
+
+You can download the datasets from https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting/data. 
+
+**Option 2: Download from this Repository**
+
+If you are using this repository, download the necessary files (`stores.csv`, `train.csv`, `test.csv`, `features.csv`) directly from the repository.
+
+### Step 2: Set Up the Project
+
+Create a new directory on your local machine or on Google Colab for the project. Place the downloaded files (`stores.csv`, `train.csv`, `test.csv`, `features.csv`) into this directory.
+
+### Step 3: Run the Project
+
+In the Colab Notebook interface, install the necessary libraries, and navigate to the directory where you placed the files and open the WalmartRecruiting.ipynb file. Run the notebook cells sequentially to execute the code.
+
+## NOTES
+
 # Category Encoders
 
 Category encoders are used in machine learning to convert categorical data into numerical data so that algorithms can process them effectively. Different types of category encoders handle this transformation in various ways:
